@@ -4,10 +4,10 @@ import SectionTitle from "../SectionTitle"
 import { expArray } from "./constants"
 import Badge from "../Badge"
 
-const Experience = () => {
+const Projects = () => {
   return (
     <Wrapper section>
-      <SectionTitle>Experience</SectionTitle>
+      <SectionTitle>Projects</SectionTitle>
 
       <div className="flex flex-col ">
         {expArray
@@ -20,17 +20,14 @@ const Experience = () => {
               key={exp.id}
             >
               <div className="leading-snug flex flex-col">
-                <h2 className="text-xs mb-2 md:text-6xl text-black/80">
-                  {exp.label}
-                </h2>
                 <a
-                  className="font-bold hover:scale-[1.02] transition md:text-4xl"
-                  href={exp.companyLink}
+                  className="font-bold hover:scale-[1.02] transition md:text-4xl mr-auto"
+                  href={exp.url}
                   target="_blank"
                 >
-                  {exp.company}
+                  {exp.title}
                 </a>
-                <p className="md:text-4xl">{exp.position}</p>
+                {/* <p className="md:text-4xl">{exp.position}</p> */}
               </div>
 
               <p className="text-sm mt-2 leadning-normal">{exp.description}</p>
@@ -47,4 +44,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default Projects

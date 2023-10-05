@@ -1,6 +1,5 @@
 import React from "react"
 import Wrapper from "../Wrapper"
-import ScrollAnimation from "react-animate-on-scroll"
 import { FaFacebookSquare, FaLinkedin, FaGithubSquare } from "react-icons/fa"
 
 const socialMedia = [

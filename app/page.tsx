@@ -2,6 +2,7 @@
 import Experience from "@/components/Experience"
 import Header from "@/components/Header"
 import Hero from "@/components/Hero"
+import Projects from "@/components/Projects"
 import Wrapper from "@/components/Wrapper"
 import { useTheme } from "@/hooks/ThemeProvider"
 
@@ -14,8 +15,9 @@ export default function Home() {
       >
         <Header />
         <Hero />
-        <Wrapper className="flex flex-col gap-[48px]  md:gap-[128px] md:my-[128px]">
+        <Wrapper className="flex flex-col gap-4  md:gap-[128px] md:my-[128px]">
           <Experience />
+          <Projects />
           {/* <Skills /> */}
           {/* <Education /> */}
         </Wrapper>
