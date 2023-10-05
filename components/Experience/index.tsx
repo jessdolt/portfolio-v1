@@ -32,9 +32,9 @@ const Experience = () => {
 
   return (
     <Wrapper section>
-      <SectionTitle>Experience</SectionTitle>
+      <SectionTitle>Work Experience</SectionTitle>
 
-      <div className="flex flex-col gap-4 md:gap-12">
+      <div className="flex flex-col  gap-8 md:gap-12">
         {expArray
           .sort((a, b) => b.id - a.id)
           .map((exp, i) => (
@@ -44,11 +44,11 @@ const Experience = () => {
               } `}
               key={exp.id}
             >
-              <h2 className="text-xl font-[900] md:text-6xl uppercase text-black/70">
+              <h2 className="text-2xl font-bold md:text-6xl text-black/70">
                 {exp.label}
               </h2>
-              <h3 className="text-lg md:text-4xl font-[300]">{exp.company}</h3>
-              <p className="text-lg md:text-4xl font-[300]">{exp.position}</p>
+              <h3 className="text-lg font-[300] md:text-4xl ">{exp.company}</h3>
+              <p className="text-lg font-[300] md:text-4xl ">{exp.position}</p>
             </div>
           ))}
       </div>
