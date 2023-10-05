@@ -24,7 +24,7 @@ const socialMedia = [
 const Hero = () => {
   const date = new Date()
   return (
-    <Wrapper className="h-[85vh] flex flex-col gap-12 lg:gap-0 ">
+    <Wrapper className="mb-14 flex flex-col gap-12 lg:gap-0 ">
       <div className="flex flex-col justify-between mt-6 lg:flex-row ">
         <h1 className="text-5xl lg:text-[148px] max-w-5xl break-words w-full font-bold leading-none uppercase ">
           Front End Developer
