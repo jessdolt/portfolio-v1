@@ -47,7 +47,7 @@ const Hero = () => {
 
         <div className="flex gap-2">
           {socialMedia.map((social) => (
-            <a href={social.link} target="_blank">
+            <a href={social.link} key={social.id} target="_blank">
               {social.icon}
             </a>
           ))}
