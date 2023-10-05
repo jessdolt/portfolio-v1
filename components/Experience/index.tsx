@@ -1,61 +1,49 @@
 import React from "react"
 import Wrapper from "../Wrapper"
 import SectionTitle from "../SectionTitle"
+import { expArray } from "./constants"
 
 const Badge = ({ children }: { children: React.ReactNode }) => (
-  <div className="px-4 py-2 bg-black/90 text-white min-w-fit rounded-full m-2 text-2xl">
+  <div className="px-3 py-1 text-xs bg-primary-dark dark:bg-primary text-primary-dark dark:text-primary min-w-fit rounded-full  md:m-2 md:text-2xl">
     {children}
   </div>
 )
 
 const Experience = () => {
-  const expArray = [
-    {
-      id: 1,
-      label: "April 2019 - June 2019",
-      company: "Vertiv Philippines, Inc.",
-      position: "Data Encoder Intern",
-    },
-    {
-      id: 2,
-      label: "June 2022 - April 2023",
-      company: "ALC Group of Companies",
-      position: "Junior Web Developer",
-    },
-    {
-      id: 3,
-      label: "May 2023 - Present",
-      company: "Chanz IT Business Solutions Inc.",
-      position: "Full Stack Developer",
-    },
-  ]
-
   return (
     <Wrapper section>
-      {/* <SectionTitle>Work Experience</SectionTitle> */}
+      <SectionTitle>Experience</SectionTitle>
 
-      <div className="flex flex-col  gap-8 md:gap-12">
+      <div className="flex flex-col ">
         {expArray
           .sort((a, b) => b.id - a.id)
           .map((exp, i) => (
             <div
-              className={`flex md:gap-2 ${
+              className={`flex flex-col mb-10 md:gap-2 ${
                 i % 2 != 0 && "md:self-end md:text-right"
               } `}
               key={exp.id}
             >
-              <div className="max-w-[100px]">
-                <h2 className="text-md font-bold md:text-6xl text-black/70">
+              <div className="leading-snug flex flex-col">
+                <h2 className="text-xs mb-2 md:text-6xl text-black/80">
                   {exp.label}
                 </h2>
-              </div>
-              <div>
-                <h3 className="text-md font-bold md:text-4xl ">
+                <a
+                  className="font-bold hover:scale-[1.02] transition md:text-4xl"
+                  href={exp.companyLink}
+                  target="_blank"
+                >
                   {exp.company}
-                </h3>
-                <p className="text-md font-[300] md:text-4xl ">
-                  {exp.position}
-                </p>
+                </a>
+                <p className="md:text-4xl">{exp.position}</p>
+              </div>
+
+              <p className="text-sm mt-2 leadning-normal">{exp.description}</p>
+
+              <div className="flex w-full flex-wrap mt-2 gap-2">
+                {exp.skills.map((skill, index) => (
+                  <Badge key={index}>{skill}</Badge>
+                ))}
               </div>
             </div>
           ))}

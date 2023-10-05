@@ -15,7 +15,7 @@ const Wrapper: React.FC<WrapperProps> = ({
 
   return (
     <div
-      className={`max-w-7xl mx-auto w-full px-2 ${className} ${
+      className={`max-w-7xl mx-auto w-full px-4 ${className} ${
         section && sectionClassname
       }`}
     >
