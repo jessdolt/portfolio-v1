@@ -3,12 +3,13 @@ import Wrapper from "../Wrapper"
 import SectionTitle from "../SectionTitle"
 import { expArray } from "./constants"
 import Badge from "../Badge"
+import Section from "../Section"
+import Badges from "../Badges"
+import LinkTitle from "../LinkTitle"
 
 const Projects = () => {
   return (
-    <Wrapper section>
-      <SectionTitle>Projects</SectionTitle>
-
+    <Section title="Projects">
       <div className="flex flex-col ">
         {expArray
           .sort((a, b) => b.id - a.id)
@@ -20,27 +21,16 @@ const Projects = () => {
               key={exp.id}
             >
               <div className="leading-snug flex flex-col">
-                <a
-                  className="font-bold hover:scale-[1.02] transition md:text-4xl mr-auto"
-                  href={exp.url}
-                  target="_blank"
-                >
-                  {exp.title}
-                </a>
-                {/* <p className="md:text-4xl">{exp.position}</p> */}
+                <LinkTitle url={exp.url} title={exp.title} />
               </div>
 
               <p className="text-sm mt-2 leadning-normal">{exp.description}</p>
 
-              <div className="flex w-full flex-wrap mt-2 gap-2">
-                {exp.skills.map((skill, index) => (
-                  <Badge key={index}>{skill}</Badge>
-                ))}
-              </div>
+              <Badges items={exp.skills} />
             </div>
           ))}
       </div>
-    </Wrapper>
+    </Section>
   )
 }
 
