@@ -6,12 +6,13 @@ import Wrapper from "@/components/Wrapper"
 
 export default function Home() {
   return (
-    <main className="bg-[#EEEEEE] min-h-screen">
+    <main className="bg-[#f7f7f7] min-h-screen">
       <Header />
       <Hero />
       <Wrapper className="flex flex-col gap-[48px] py-8 md:gap-[128px] md:my-[128px]">
         <Experience />
         <Skills />
+        <div className="min-h-screen"></div>
       </Wrapper>
     </main>
   )

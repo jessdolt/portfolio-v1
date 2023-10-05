@@ -3,7 +3,7 @@ import Wrapper from "../Wrapper"
 import SectionTitle from "../SectionTitle"
 
 const Badge = ({ children }: { children: React.ReactNode }) => (
-  <div className="px-4 py-2 bg-black/90 text-white min-w-fit rounded-full  m-1 md:m-2 md:text-2xl">
+  <div className="px-3 py-1 text-sm bg-black/90 text-white min-w-fit rounded-full  m-1 md:m-2 md:text-2xl">
     {children}
   </div>
 )
