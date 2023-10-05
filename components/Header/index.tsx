@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Wrapper>
       <header>
-        <nav className="py-4 lg:flex items-center  h-[10vh]">
+        <nav className="lg:flex items-center h-[15vh]">
           <ul className="hidden flex-1 md:flex gap-20 items-center">
             <li>
               <Link href="/">Jess Roque</Link>

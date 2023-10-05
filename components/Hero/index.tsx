@@ -5,9 +5,9 @@ import ScrollAnimation from "react-animate-on-scroll"
 const Hero = () => {
   const date = new Date()
   return (
-    <Wrapper className="min-h-[90vh] flex flex-col justify-center gap-12 lg:gap-0 ">
-      <div className="flex flex-col justify-between lg:flex-row">
-        <h1 className="text-6xl lg:text-[148px] max-w-5xl break-words w-full font-bold leading-none uppercase ">
+    <Wrapper className="h-[85vh] flex flex-col justify-center gap-8 lg:gap-0 ">
+      <div className="flex flex-col justify-between lg:flex-row ">
+        <h1 className="text-5xl lg:text-[148px] max-w-5xl break-words w-full font-bold leading-none uppercase ">
           Front End Developer
         </h1>
         <span className="text-xl lg:text-4xl font-bold">
@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <h1 className="text-5xl lg:text-[124px] font-bold uppercase leading-none ">
+        <h1 className="text-4xl lg:text-[124px] font-bold uppercase leading-none ">
           Jess Roque
         </h1>
         <p className="text-lg font-[300] lg:text-3xl">
