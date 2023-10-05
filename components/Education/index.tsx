@@ -8,47 +8,41 @@ const Badge = ({ children }: { children: React.ReactNode }) => (
   </div>
 )
 
-const Experience = () => {
+const Education = () => {
   const expArray = [
     {
       id: 1,
-      label: "April 2019 - June 2019",
-      company: "Vertiv Philippines, Inc.",
-      position: "Data Encoder Intern",
+      label: "2018 - 2021",
+      school: "Polytechnic University of the Philippines",
+      course: "Diploma in Information Communication Technology",
     },
     {
       id: 2,
-      label: "June 2022 - April 2023",
-      company: "ALC Group of Companies",
-      position: "Junior Web Developer",
-    },
-    {
-      id: 3,
-      label: "May 2023 - Present",
-      company: "Chanz IT Business Solutions Inc.",
-      position: "Full Stack Developer",
+      label: "2021 - 2023",
+      school: "Polytechnic University of the Philippines",
+      course: "Bachelor of Science in Information Technology",
     },
   ]
 
   return (
     <Wrapper section>
-      <SectionTitle>Work Experience</SectionTitle>
+      <SectionTitle>Education</SectionTitle>
 
       <div className="flex flex-col  gap-8 md:gap-12">
         {expArray
           .sort((a, b) => b.id - a.id)
-          .map((exp, i) => (
+          .map((edu, i) => (
             <div
               className={`flex flex-col md:gap-2 ${
                 i % 2 != 0 && "md:self-end md:text-right"
               } `}
-              key={exp.id}
+              key={edu.id}
             >
               <h2 className="text-2xl font-bold md:text-6xl text-black/70">
-                {exp.label}
+                {edu.label}
               </h2>
-              <h3 className="text-md font-bold md:text-4xl ">{exp.company}</h3>
-              <p className="text-md font-[300] md:text-4xl ">{exp.position}</p>
+              <h3 className="text-md font-bold md:text-4xl ">{edu.course}</h3>
+              <p className="text-md font-[300] md:text-4xl ">{edu.school}</p>
             </div>
           ))}
       </div>
@@ -56,4 +50,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default Education

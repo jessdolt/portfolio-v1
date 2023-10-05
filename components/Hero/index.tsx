@@ -5,8 +5,8 @@ import ScrollAnimation from "react-animate-on-scroll"
 const Hero = () => {
   const date = new Date()
   return (
-    <Wrapper className="h-[85vh] flex flex-col justify-center gap-8 lg:gap-0 ">
-      <div className="flex flex-col justify-between lg:flex-row ">
+    <Wrapper className="h-[85vh] flex flex-col gap-12 lg:gap-0 ">
+      <div className="flex flex-col justify-between mt-6 lg:flex-row ">
         <h1 className="text-5xl lg:text-[148px] max-w-5xl break-words w-full font-bold leading-none uppercase ">
           Front End Developer
         </h1>

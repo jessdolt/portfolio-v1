@@ -1,3 +1,4 @@
+import Education from "@/components/Education"
 import Experience from "@/components/Experience"
 import Header from "@/components/Header"
 import Hero from "@/components/Hero"
@@ -12,7 +13,7 @@ export default function Home() {
       <Wrapper className="flex flex-col gap-[48px] py-8 md:gap-[128px] md:my-[128px]">
         <Experience />
         <Skills />
-        <div className="min-h-screen"></div>
+        <Education />
       </Wrapper>
     </main>
   )
