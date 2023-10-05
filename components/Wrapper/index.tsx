@@ -11,7 +11,7 @@ const Wrapper: React.FC<WrapperProps> = ({
   className = "",
   section = false,
 }) => {
-  const sectionClassname = "flex gap-4 md:gap-10 flex-col !px-0"
+  const sectionClassname = "flex md:gap-10 flex-col !px-0"
 
   return (
     <div
