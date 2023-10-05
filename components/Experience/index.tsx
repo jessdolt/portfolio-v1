@@ -42,6 +42,7 @@ const Experience = () => {
               className={`flex flex-col md:gap-2 ${
                 i % 2 != 0 && "md:self-end md:text-right"
               } `}
+              key={exp.id}
             >
               <h2 className="text-2xl md:text-6xl uppercase font-bold text-black/60">
                 {exp.label}
