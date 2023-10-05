@@ -1,6 +1,25 @@
 import React from "react"
 import Wrapper from "../Wrapper"
 import ScrollAnimation from "react-animate-on-scroll"
+import { FaFacebookSquare, FaLinkedin, FaGithubSquare } from "react-icons/fa"
+
+const socialMedia = [
+  {
+    id: 1,
+    icon: <FaFacebookSquare size={48} />,
+    link: "https://www.facebook.com/jessdolt",
+  },
+  {
+    id: 2,
+    icon: <FaLinkedin size={48} />,
+    link: "https://www.linkedin.com/in/jess-roque-b503a1184/",
+  },
+  {
+    id: 3,
+    icon: <FaGithubSquare size={48} />,
+    link: "https://github.com/jessdolt",
+  },
+]
 
 const Hero = () => {
   const date = new Date()
@@ -26,9 +45,13 @@ const Hero = () => {
           technical expertise to every project I undertake.
         </p>
 
-        <button className="bg-black text-white mt-2 block mr-auto py-3 px-6 rounded-lg lg:hidden">
-          About me
-        </button>
+        <div className="flex gap-2">
+          {socialMedia.map((social) => (
+            <a href={social.link} target="_blank">
+              {social.icon}
+            </a>
+          ))}
+        </div>
       </div>
     </Wrapper>
   )
