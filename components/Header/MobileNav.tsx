@@ -10,7 +10,7 @@ const MobileNav = () => {
   return (
     <>
       <NavigationDrawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
-      <div className="flex md:hidden justify-between items-center h-full ">
+      <div className="flex lg:hidden justify-between items-center h-full ">
         <div className="flex items-center gap-1">
           <div className="w-[10px] h-3 mt-[2px] bg-primary-dark dark:bg-primary " />
           <h1 className="font-[800] text-[14px] tracking-[0.5px]">

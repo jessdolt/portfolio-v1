@@ -13,6 +13,13 @@ const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
   isOpen,
   onClose,
 }) => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog onClose={onClose} as="div" className="relative z-50">
@@ -61,20 +68,35 @@ const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                       <div className="flex flex-col items-center justify-between h-full">
                         <div className="my-8 space-y-4">
                           <Link
-                            href="/"
+                            href="#Experience"
                             className="flex flex-col gap-3 items-center cursor-pointer hover:opacity-75"
+                            onClick={(e) => {
+                              e.preventDefault()
+                              onClose()
+                              scrollToSection("Experience")
+                            }}
                           >
-                            About
+                            Experience
                           </Link>
                           <Link
-                            href="/"
+                            href="#Projects"
                             className="flex flex-col gap-3 items-center cursor-pointer hover:opacity-75"
+                            onClick={(e) => {
+                              e.preventDefault()
+                              onClose()
+                              scrollToSection("Projects")
+                            }}
                           >
-                            Work
+                            Projects
                           </Link>
                           <Link
-                            href="/"
+                            href="#Contact"
                             className="flex flex-col gap-3 items-center cursor-pointer hover:opacity-75"
+                            onClick={(e) => {
+                              e.preventDefault()
+                              onClose()
+                              scrollToSection("Contact")
+                            }}
                           >
                             Contact Me
                           </Link>

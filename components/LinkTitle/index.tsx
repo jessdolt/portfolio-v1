@@ -9,7 +9,7 @@ interface LinkTitleProps {
 const LinkTitle: React.FC<LinkTitleProps> = ({ title, url }) => {
   return (
     <a
-      className="font-bold hover:scale-[1.02] transition md:text-4xl flex mr-auto"
+      className="font-bold hover:scale-[1.02] transition md:text-xl flex mr-auto"
       href={url}
       target="_blank"
     >

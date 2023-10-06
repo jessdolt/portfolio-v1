@@ -27,7 +27,7 @@ const InputGroup: React.FC<InputGroupProps> = ({
 }) => {
   return (
     <div className="">
-      <label htmlFor={id} className="mb-2 block">
+      <label htmlFor={id} className="text-sm mb-2 block">
         {label} {required && <span className="text-red-500">*</span>}
       </label>
       {!textArea ? (
@@ -39,7 +39,7 @@ const InputGroup: React.FC<InputGroupProps> = ({
           onChange={onChange}
           required={required}
           disabled={disabled}
-          className="p-2 border rounded-md border-black/80 w-full max-w-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black disabled:opacity-75"
+          className="text-sm p-2 border rounded-md  text-black border-black/80 w-full max-w-md focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-black disabled:opacity-75"
         />
       ) : (
         <textarea
@@ -49,7 +49,7 @@ const InputGroup: React.FC<InputGroupProps> = ({
           value={value}
           onChange={onChange}
           disabled={disabled}
-          className="p-2 border rounded-md border-black/80 w-full max-w-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black disabled:opacity-75"
+          className="text-sm p-2  border rounded-md text-black border-black/80 w-full max-w-md focus-visible:outline-none focus-visible:ring-1  focus-visible:ring-black disabled:opacity-75"
         />
       )}
     </div>

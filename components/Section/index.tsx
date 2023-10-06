@@ -3,13 +3,14 @@ import SectionTitle from "../SectionTitle"
 import React, { useEffect, useState, useRef } from "react"
 
 interface SectionProps {
-  title: string
+  title?: string
   children: React.ReactNode
   className?: string
   isSticky?: boolean
+  id?: string
 }
 
-const Section: React.FC<SectionProps> = ({ title, children }) => {
+const Section: React.FC<SectionProps> = ({ title, children, id }) => {
   const [isSticky, setIsSticky] = useState(false)
 
   const sectionTitleRef = useRef<HTMLDivElement>(null)
@@ -48,7 +49,7 @@ const Section: React.FC<SectionProps> = ({ title, children }) => {
 
   return (
     <Wrapper section>
-      <div ref={sectionTitleRef}>
+      <div ref={sectionTitleRef} id={id}>
         <SectionTitle>{title}</SectionTitle>
       </div>
       {children}

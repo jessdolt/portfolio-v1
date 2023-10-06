@@ -36,8 +36,12 @@ const ContactMe = () => {
   }
 
   return (
-    <Section title="Contact Me">
-      <form className="space-y-4" ref={form} onSubmit={handleSubmit}>
+    <Section title="Contact Me" id="Contact">
+      <form
+        className="space-y-4 max-w-md w-full mx-auto "
+        ref={form}
+        onSubmit={handleSubmit}
+      >
         <InputGroup
           id="name"
           label="Name"
@@ -81,7 +85,7 @@ const ContactMe = () => {
 
         <button
           type="submit"
-          className="w-full p-2 bg-primary-dark dark:bg-primary text-primary-dark dark:text-primary rounded-md disabled:opacity-75"
+          className="w-full uppercase font-bold p-2 bg-primary-dark dark:bg-primary text-primary-dark dark:text-primary rounded-md disabled:opacity-75"
           disabled={isLoading}
         >
           Submit

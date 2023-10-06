@@ -2,7 +2,7 @@ import React from "react"
 
 const Badge = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="px-3 py-1 text-xs bg-primary-dark dark:bg-[#f1f1f1] text-primary-dark dark:text-primary min-w-fit rounded-full  md:m-2 md:text-2xl">
+    <div className="px-3 py-1 text-xs bg-primary-dark dark:bg-white lg:text-md text-primary-dark dark:text-primary min-w-fit rounded-full  md:text-md ">
       {children}
     </div>
   )

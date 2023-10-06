@@ -1,21 +1,19 @@
 export const expArray = [
   {
     id: 1,
-    label: "April 2019 - June 2019",
     title: "CabGo",
-    url: "https://www.vertiv.com/en-asia/",
+    url: "https://cab-go.vercel.app/",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "A front-end taxi booking system designed to provide a user-friendly experience for passengers and drivers alike. Inspired by popular ride-sharing apps like Uber, CabGo utilizes Mapbox for mapping and routing, ensuring efficient and accurate navigation. ",
     skills: ["NextJs", "Typescript", "TailwindCSS", "MapBox", "Clerk"],
   },
   {
     id: 2,
-    label: "June 2022 - April 2023",
     title: "Messenger Clone",
     url: "https://alcgroup.com.ph/",
     position: "Junior Web Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "A Real-time messaging system that mirrors exactly the features of Facebook Messenger.",
     skills: [
       "NextJs",
       "Typescript",
@@ -29,12 +27,11 @@ export const expArray = [
   },
   {
     id: 3,
-    label: "May 2023 - Present",
     title: "ForgeX",
     url: "https://develop.forgexapp.com/",
     position: "Full Stack Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "A cutting-edge e-learning system that revolutionizes the way we acquire and retain knowledge. Harnessing the power of spaced repetition learning techniques, Forgex uses interactive flashcards to optimize the learning curve.",
     skills: [
       "NextJs",
       "Redux Saga",

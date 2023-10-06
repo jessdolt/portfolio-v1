@@ -19,7 +19,8 @@ const SectionTitle = ({
        mb-8 
        uppercase 
        font-bold 
-       md:text-7xl 
+       md:text-4xl 
+       md:mb-4
       `,
         isSticky && "fixed w-screen top-0 bg-white py-4  backdrop-blur"
       )}

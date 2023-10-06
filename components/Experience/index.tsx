@@ -9,18 +9,18 @@ import InfoContainer from "../InfoContainer"
 
 const Experience = () => {
   return (
-    <Section title="Experience">
+    <Section title="Experience" id="Experience">
       <div className="flex flex-col">
         {expArray
           .sort((a, b) => b.id - a.id)
           .map((exp, i) => (
             <InfoContainer key={i}>
               <div className="leading-snug flex flex-col">
-                <h2 className="text-xs mb-2 md:text-6xl text-black/80">
+                <h2 className="text-xs mb-2 md:text-lg dark:text-white/80 text-black/80">
                   {exp.label}
                 </h2>
                 <LinkTitle title={exp.company} url={exp.companyLink} />
-                <p className="md:text-4xl">{exp.position}</p>
+                <p className="md:text-xl">{exp.position}</p>
               </div>
               <Description>{exp.description}</Description>
               <Badges items={exp.skills} />

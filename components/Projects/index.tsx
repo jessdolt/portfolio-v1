@@ -12,7 +12,7 @@ import InfoContainer from "../InfoContainer"
 
 const Projects = () => {
   return (
-    <Section title="Projects">
+    <Section title="Projects" id="Projects">
       <div className="flex flex-col ">
         {expArray
           .sort((a, b) => b.id - a.id)

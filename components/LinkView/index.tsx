@@ -8,7 +8,7 @@ interface LinkViewProps {
 const LinkView: React.FC<LinkViewProps> = ({ title, url }) => {
   return (
     <a
-      className="mr-auto mb-12 border-b border-b-transparent hover:border-b-black transition"
+      className="mr-auto mb-12 border-b border-b-transparent hover:border-b-black transition dark:hover:border-b-white"
       href={url}
       target="_blank"
     >

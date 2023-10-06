@@ -2,6 +2,7 @@
 import ContactMe from "@/components/ContactMe"
 import Education from "@/components/Education"
 import Experience from "@/components/Experience"
+import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Hero from "@/components/Hero"
 import Projects from "@/components/Projects"
@@ -17,13 +18,14 @@ export default function Home() {
       >
         <Header />
         <Hero />
-        <Wrapper className="flex flex-col md:gap-[128px] md:my-[128px]">
+        <Wrapper className="flex flex-col ">
           <Experience />
           <Projects />
           <ContactMe />
           {/* <Skills /> */}
           {/* <Education /> */}
-          <div className="min-h-[700px]"></div>
+          <Footer />
+          <div className="pb-10"></div>
         </Wrapper>
       </main>
     </main>
