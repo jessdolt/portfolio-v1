@@ -49,7 +49,7 @@ const Section: React.FC<SectionProps> = ({ title, children }) => {
   return (
     <Wrapper section>
       <div ref={sectionTitleRef}>
-        <SectionTitle isSticky={isSticky}>{title}</SectionTitle>
+        <SectionTitle>{title}</SectionTitle>
       </div>
       {children}
 

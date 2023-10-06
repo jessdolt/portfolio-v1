@@ -1,4 +1,5 @@
 "use client"
+import ContactMe from "@/components/ContactMe"
 import Education from "@/components/Education"
 import Experience from "@/components/Experience"
 import Header from "@/components/Header"
@@ -19,6 +20,7 @@ export default function Home() {
         <Wrapper className="flex flex-col gap-4  md:gap-[128px] md:my-[128px]">
           <Experience />
           <Projects />
+          <ContactMe />
           {/* <Skills /> */}
           {/* <Education /> */}
           <div className="min-h-[700px]"></div>

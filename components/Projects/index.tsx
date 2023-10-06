@@ -6,6 +6,9 @@ import Badge from "../Badge"
 import Section from "../Section"
 import Badges from "../Badges"
 import LinkTitle from "../LinkTitle"
+import LinkView from "../LinkView"
+import Description from "../Description"
+import InfoContainer from "../InfoContainer"
 
 const Projects = () => {
   return (
@@ -14,21 +17,21 @@ const Projects = () => {
         {expArray
           .sort((a, b) => b.id - a.id)
           .map((exp, i) => (
-            <div
-              className={`flex flex-col mb-10 md:gap-2 ${
-                i % 2 != 0 && "md:self-end md:text-right"
-              } `}
-              key={exp.id}
-            >
+            <InfoContainer key={i}>
               <div className="leading-snug flex flex-col">
                 <LinkTitle url={exp.url} title={exp.title} />
               </div>
 
-              <p className="text-sm mt-2 leadning-normal">{exp.description}</p>
+              <Description>{exp.description}</Description>
 
               <Badges items={exp.skills} />
-            </div>
+            </InfoContainer>
           ))}
+
+        <LinkView
+          title="View Project Archives"
+          url="https://github.com/jessdolt?tab=repositories"
+        />
       </div>
     </Section>
   )

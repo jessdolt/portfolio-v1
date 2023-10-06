@@ -3,20 +3,18 @@ import { expArray } from "./constants"
 import Section from "../Section"
 import Badges from "../Badges"
 import LinkTitle from "../LinkTitle"
+import LinkView from "../LinkView"
+import Description from "../Description"
+import InfoContainer from "../InfoContainer"
 
 const Experience = () => {
   return (
     <Section title="Experience">
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         {expArray
           .sort((a, b) => b.id - a.id)
           .map((exp, i) => (
-            <div
-              className={`flex flex-col mb-10 md:gap-2 ${
-                i % 2 != 0 && "md:self-end md:text-right"
-              } `}
-              key={exp.id}
-            >
+            <InfoContainer key={i}>
               <div className="leading-snug flex flex-col">
                 <h2 className="text-xs mb-2 md:text-6xl text-black/80">
                   {exp.label}
@@ -24,19 +22,12 @@ const Experience = () => {
                 <LinkTitle title={exp.company} url={exp.companyLink} />
                 <p className="md:text-4xl">{exp.position}</p>
               </div>
-
-              <p className="text-sm mt-2 leadning-normal">{exp.description}</p>
-
+              <Description>{exp.description}</Description>
               <Badges items={exp.skills} />
-            </div>
+            </InfoContainer>
           ))}
-        <a
-          className="mr-auto mb-12 border-b border-b-transparent hover:border-b-black transition"
-          href="/jess.pdf"
-          target="_blank"
-        >
-          View Full Résumé
-        </a>
+
+        <LinkView title="View Full Résumé" url="/jess.pdf" />
       </div>
     </Section>
   )
