@@ -17,7 +17,7 @@ export default function Home() {
       >
         <Header />
         <Hero />
-        <Wrapper className="flex flex-col gap-4  md:gap-[128px] md:my-[128px]">
+        <Wrapper className="flex flex-col md:gap-[128px] md:my-[128px]">
           <Experience />
           <Projects />
           <ContactMe />

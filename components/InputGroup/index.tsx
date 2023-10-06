@@ -12,6 +12,7 @@ interface InputGroupProps {
   type?: string
   textArea?: boolean
   required?: boolean
+  disabled?: boolean
 }
 
 const InputGroup: React.FC<InputGroupProps> = ({
@@ -21,7 +22,8 @@ const InputGroup: React.FC<InputGroupProps> = ({
   onChange,
   type = "text",
   textArea,
-  required,
+  required = false,
+  disabled = false,
 }) => {
   return (
     <div className="">
@@ -35,17 +37,19 @@ const InputGroup: React.FC<InputGroupProps> = ({
           type={type}
           value={value}
           onChange={onChange}
-          required
-          className="p-2 border rounded-md border-black/80 w-full max-w-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black"
+          required={required}
+          disabled={disabled}
+          className="p-2 border rounded-md border-black/80 w-full max-w-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black disabled:opacity-75"
         />
       ) : (
         <textarea
           id={id}
           name={id}
-          required
+          required={required}
           value={value}
           onChange={onChange}
-          className="p-2 border rounded-md border-black/80 w-full max-w-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black"
+          disabled={disabled}
+          className="p-2 border rounded-md border-black/80 w-full max-w-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black disabled:opacity-75"
         />
       )}
     </div>
