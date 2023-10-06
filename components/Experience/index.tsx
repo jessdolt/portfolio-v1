@@ -30,6 +30,13 @@ const Experience = () => {
               <Badges items={exp.skills} />
             </div>
           ))}
+        <a
+          className="mr-auto mb-12 border-b border-b-transparent hover:border-b-black transition"
+          href="/jess.pdf"
+          target="_blank"
+        >
+          View Full Résumé
+        </a>
       </div>
     </Section>
   )
