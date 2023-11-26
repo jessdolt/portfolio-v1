@@ -38,7 +38,7 @@ const Hero = () => {
           Jess Roque
         </h1>
         <p className="text-lg font-[300] lg:text-2xl lg:text-right lg:ml-auto">
-         a passionate full-stack developer with a strong focus on creating immersive and user-friendly front-end experiences. My expertise in coding ensures that every project I undertake seamlessly combines creativity with technical precision, delivering both aesthetics and functionality seamlessly
+         a passionate full-stack developer with a strong focus on creating immersive and user-friendly front-end experiences. My expertise in coding ensures that every project I undertake seamlessly combines creativity with technical precision, delivering both aesthetics and functionality seamlessly.
         </p>
 
         <div className="flex gap-2 lg:justify-end">
