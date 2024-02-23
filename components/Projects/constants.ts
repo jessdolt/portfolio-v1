@@ -28,9 +28,9 @@ export const expArray = [
   {
     id: 3,
     title: "Genius AI",
-    url: "https://geniuis-ai.vercel.app/",
+    url: "https://genuis-ai-app.vercel.app/",
     description:
-      "A progressive digital experience leveraging the capabilities of OpenAI to redefine creativity across diverse domains. This pioneering platform acts as a dynamic generator, crafting compelling content in the realms of conversation, images, video, music, and code..",
+      "A progressive digital experience leveraging the capabilities of OpenAI to redefine creativity across diverse domains. This pioneering platform acts as a dynamic generator, crafting compelling content in the realms of conversation, images, video, music, and code.",
     skills: [
       "NextJs",
       "Typescript",
